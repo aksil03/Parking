@@ -1,7 +1,6 @@
 import { GPS } from "../types/GPS";
 import { toSlug } from "../utils/toSlug";
 import { generateRandomNumberId } from "../utils/generateRandomNumberId";
-import { EventEmitter } from 'events';
 
 export default class City {
     id: number;

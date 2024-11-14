@@ -13,7 +13,7 @@ export const cities = [aixEnProvence, laSpezia, aixLaChapelle, sanCristobal, new
 
 
 // création des parking, inutile de renseignée la localisation, le code la recupere automatiquement via la ville associée
-const parkingA = new Parking("Parking A", aixEnProvence.id, 100, true, 4.5);
+const parkingA = new Parking("Parking A", aixEnProvence.id, 100, false, 4.5);
 const parkingB = new Parking("Parking B", laSpezia.id, 50, true, 3);  
 const parkingC = new Parking("Parking C", laSpezia.id, 80, true, 2.5);  
 const parkingD = new Parking("Parking D", aixLaChapelle.id, 40, true, 2.8); 

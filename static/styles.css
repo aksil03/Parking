@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css');
+
+
+body {
+    font-family: 'Roboto';
+    line-height: 1.6;
+    background-color: #c9c8c8cc; 
+}
+
+
+
+h1 {
+    color: #2c3e50; 
+    text-align: center; 
+    opacity: 0; 
+    transform: translateY(-20px); 
+    animation: fadeInUp 1s forwards; 
+}
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+img {
+    display: block;
+    margin: 20px auto; 
+    width: 100%; 
+    max-width: 600px; 
+    opacity: 0;
+    animation: fadeIn 1.5s forwards; 
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; 
+    }
+}
+
+p {
+    margin: 10px 0;
+    text-align: center; 
+    opacity: 0; 
+    animation: fadeIn 2s forwards; 
+}
+
+
+p:nth-of-type(1) {
+    animation-delay: 0.5s; 
+}
+
+p:nth-of-type(2) {
+    animation-delay: 1s; 
+}
+
+
+@keyframes fadeInButtons {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeInButtons 1s ease forwards;
+    animation-delay: 1s; 
+}
+
+
+.button {
+    background-color: #3498db; 
+    color: white; 
+    padding: 10px 20px; 
+    margin: 0 10px;
+    border: none; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-size: 16px; 
+    transition: background-color 0.3s; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 150px; 
+}
+
+.button:hover {
+    background-color: #2980b9; 
+    text-decoration: none;
+}
+
+
+.button:active,
+.button:visited,
+.button:focus {
+    background-color: #2980b9; 
+    color: white;
+    outline: none; 
+    text-decoration: none; 
+}
+
