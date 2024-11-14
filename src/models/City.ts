@@ -1,28 +1,19 @@
-import { GPS } from "../types/GPS";
-import { toSlug } from "../utils/toSlug";
-import { generateRandomNumberId } from "../utils/generateRandomNumberId";
+import { toSlug } from '../utils/toSlug';
+import { GPS } from '../types/GPS'; 
 
-export default class City {
-    id: number;
+export default class  City {
+    //optionel car auto incrémenter dans la bdd
+    id?: number; 
     name: string;
     slug: string;
-    parkingsIds: number[];
+    location: GPS; 
     country: string;
-    location: GPS;
 
-    constructor(name: string, country: string, location: GPS) {
-        // genere un ID aléatoire
-        this.id = generateRandomNumberId();
+    constructor(name: string, country: string, location: GPS, id?: number) {
         this.name = name;
-        this.slug = toSlug(name);
-        // initialisation vide et incrémenatation a l'instanciation des parkings
-        this.parkingsIds = [];
+        this.slug = toSlug(name); 
         this.country = country;
         this.location = location;
-    }
-
-    // Ajouter l'ID du parking a la liste parkingId
-    Ajout(parkingId: number) {
-        this.parkingsIds.push(parkingId);
+        this.id = id; 
     }
 }
